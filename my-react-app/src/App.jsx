@@ -1,35 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import MainLayout from "@components/layout/MainLayout.jsx";
+import TaskList from "@components/tasks/TaskList.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+/**
+ * Root App component.
+ * This component serves as the entry point of the application, rendering the main layout and task list.
+ * It is wrapped in a ThemeProvider in main.jsx to provide theme context to the entire app.
+ * The MainLayout component includes a header and footer, while the TaskList component displays the list of tasks.
+ *
+ * @returns {JSX.Element} The App component.
+ */
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <MainLayout>
+      <TaskList />
+    </MainLayout>
+  );
 }
-
-export default App
