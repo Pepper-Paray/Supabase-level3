@@ -34,3 +34,9 @@ export default function TaskList({ tasks, onToggle, onDelete }) {
     </div>
   );
 }
+
+// This component receives the list of tasks and two callback functions:
+//  onToggle for toggling the completion status of a task, and onDelete for deleting a task.
+//  It renders each task with a checkbox to mark it as completed and a delete button.
+//  If there are no tasks, it displays a message indicating that there are no tasks yet.
+
