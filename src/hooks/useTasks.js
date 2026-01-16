@@ -6,9 +6,9 @@ function useTasks() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  /**
-   * Loads tasks from the Supabase "tasks" table.
-   */
+  // Loads tasks from the Supabase "tasks" table.
+   
+  
   const loadTasks = useCallback(async () => {
     // Set loading and errors
     setLoading(true);
@@ -156,4 +156,4 @@ function useTasks() {
   };
 }
 
-export { useTasks }
+export { useTasks };
